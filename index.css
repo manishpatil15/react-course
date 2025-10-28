@@ -1,11 +1,175 @@
-/* body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+body {
   margin: 0;
+  padding: 0;
+   /* Prevent horizontal scroll */
 }
- */
+
+/* .root{
+  height: fit-content;
+  width: max-content;
+} */
+
+.header{
+  height : 100px;
+  display : flex;
+  justify-content : space-between;
+  border : 1px solid black;
+  background: rgb(243, 201, 201);
+}
+
+.logo img{
+  width : 100px;
+  border-radius : 50%;
+  margin-left: 2px;
+  border:#070707 2px solid;
+  
+}
+
+.nav-items{
+  margin-top: 10px;
+  font-family : Arial, Helvetica, sans-serif;
+}
+.nav-items > ul{
+
+  display : flex;
+  align-items : center;
+  
+}
+
+.nav-items > ul > li{
+  
+  padding: 15px;
+  list-style : none;
+  margin : 0 15px;
+  font-weight : bold;
+  font-size : 18px;
+  cursor : pointer;
+}
+
+.search{
+  margin : 30px;
+  font-size : 20px;
+  font-weight : bold;
+  text-align : center;
+  border : 1px solid black;
+  width : 200px;
+  height : 30px;
+  padding-top : 2px;
+  background-color : rgb(221, 221, 221);
+  cursor : pointer;
+
+}
+
+.res-card{
+  box-sizing: border-box;
+  width: 250px;
+  /* Remove or comment out the fixed height */
+  /* height: 420px; */
+  min-height: 0;
+  background-color : rgb(143, 71, 71);
+  color : white;
+  font-weight : bold;
+  font-size : 18px;
+  text-align : center;
+  border-radius : 10px;
+  box-shadow: 2px 2px 5px grey;
+  cursor : pointer;
+  overflow: hidden; /* Hide any accidental overflow */
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.res-card h2 {
+  font-weight: bold;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  padding: 0 8px; /* Add horizontal padding for better text fit */
+  line-height: 1.2; /* Adjust line height for better readability */
+  font-size: 20px;
+  color: #fad816; /* Set font color to white */
+   /* Slightly larger font size for the title */
+
+}
+.res-card h4,
+.res-card p,
+.res-card span {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.res-container{
+ display: flex;
+  flex-wrap: wrap;      /* Allow items to wrap to next line */
+  max-width: 100vw;     /* Optional: limit to viewport width */
+  box-sizing: border-box;  /* Add bottom margin */
+  justify-content: flex-start; /* Optional: align items to the left */
+  gap: 10px; /* Add space between cards */
+}
+
+.res-logo{
+  width : 248px;
+  height : 200px;
+  border : 2px solid white;
+  border-radius : 10px  10px 0px 0px ;
+  margin-bottom: 4px; /* Reduce space below image */
+  display: block;
+}
+
+.filter-btn{
+  margin : 30px;
+  font-size : 20px;
+  font-weight : bold;
+  text-align : center;
+  border : 1px solid black;
+  width : 250px;
+  height : 30px;
+  padding-top : 5px;
+  background-color : rgb(221, 221, 221);
+  cursor : pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Apply styles when button is pressed (mouse) or focused (keyboard) */
+.filter-btn:active,
+.filter-btn:focus {
+  background-color: #c0c0c0;
+  transform: scale(1.05);
+  outline: none;
+}
+
+
+.shimmer-container {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.shimmer-card {
+  display: inline-block;
+  flex-direction: column;
+  width: 200px;
+  height: 400px;
+  background: linear-gradient(90deg, #c9c7c7 25%, #6e6d6d 37%, #2b2a2a 63%, #070707 75%);
+  background-size: 800px 104px;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 10px;
+  margin: 10px;
+  gap: 20px;               /* vertical gap between image and shimmer-text rows */
+}
+
+.shimmer-image {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px;
+}
+
+.shimmer-text {
+  height: 20px;
+  background-color: #aaa8a8;
+  margin: 10px 10px;
+  border-radius: 4px;
+} 
